@@ -1,0 +1,19 @@
+eureka:
+    client:
+        fetch-registry: true
+        register-with-eureka: true
+    instance:
+        hostname: localhost
+management:
+    endpoints:
+        web:
+            exposure:
+                include: hystrix.stream
+server:
+    port: 8087
+spring:
+    application:
+        name: HYSTRIX_DASHBOARD
+    hystrix:
+        dashboard:
+            proxy-stream-allow-list: '"*"'
